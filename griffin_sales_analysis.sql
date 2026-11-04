@@ -10,23 +10,18 @@ FROM store_sales JOIN store_locations
 	ON Store_ID = StoreId
 WHERE State = "Connecticut" ;
 
--- 2nd Analysis: Connecticut sales breakdown by Year 2022
+-- 2nd Analysis: Connecticut sales breakdown by Years
 SELECT *
-FROM online_sales
-WHERE ShiptoState LIKE "connecticut%"
-	AND Date BETWEEN "2022-01-01" AND "2022-12-31"
-ORDER BY Date ASC ;
--- 2nd Analysis (B): Connecticut sales breakdown by year 2025
+FROM store_sales JOIN store_locations
+	ON Store_ID = StoreId
+WHERE State LIKE "connecticut%"
+ORDER BY YEAR(Transaction_Date) ASC ;
+-- 2nd Analysis (B): Connecticut sales breakdown by months
 SELECT *
-FROM online_sales
-WHERE ShiptoState LIKE "connecticut%"
-	AND Date BETWEEN "2025-01-01" AND "2025-12-31"
-ORDER BY Date ASC ;
--- 2nd Analysis (C): Connecticut sales breakdown by months
-SELECT *
-FROM online_sales
-WHERE ShiptoState LIKE "connecticut%"
-ORDER BY MONTH(Date);
+FROM store_sales JOIN store_locations
+	ON Store_ID = StoreId
+WHERE State LIKE "connecticut%"
+ORDER BY MONTH(Transaction_Date);
 -- 3rd Analysis: Comparison bewteen Connecticut total revenue vs East region revenue
 SELECT Region, SUM(Sale_Amount) AS Region_Rev
 FROM store_sales JOIN store_locations
@@ -36,7 +31,14 @@ JOIN management
 WHERE Region = "East"
 GROUP BY Region ;
 
--- 4th Analysis: Number of transactions per month and averge transaction by product category in Connecticut
+-- 4th Analysis: Number of transactions per month in Connecticut
+SELECT *
+FROM store_sales JOIN store_locations
+	ON Store_ID = StoreId
+WHERE State = "Connecticut"
+ORDER BY MONTH(Transaction_Date)
+;
+-- 4th Analysis (B): Averge transactions by product category in Connecticut
 SELECT inventory_categories.Category, COUNT(*) AS Total_Transactions, 
 ROUND(AVG(store_sales.Sale_Amount), 2) AS Avg_Transactions
 FROM store_sales JOIN products
