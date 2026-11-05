@@ -16,5 +16,5 @@ I started a job as a data analyst at a growing business called EmporiUm. A sales
 - Low-selling Connecticut Store: Old Saybrook (2191 sales, $277,310.18)
 - Best Product Average Sold: Technology & Accessories ($649.77)
 ## PivotChart Excel
-## Project Files
+- https://yearuptemp-my.sharepoint.com/:x:/g/personal/mgriffin_my_yearupunited_org/IQCeDVIdOnE5TJLItneD2E7xAcLh5P4yTy33ef2YRkoA4Js?e=j79S7F
 ## Video Link
