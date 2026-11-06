@@ -17,4 +17,6 @@ I started a job as a data analyst at a growing business called EmporiUm. A sales
 - Best Product Average Sold: Technology & Accessories ($649.77)
 ## PivotChart Excel
 - https://yearuptemp-my.sharepoint.com/:x:/g/personal/mgriffin_my_yearupunited_org/IQCeDVIdOnE5TJLItneD2E7xAcLh5P4yTy33ef2YRkoA4Js?e=j79S7F
-## Video Link
+## 10 Minute Presentation Video Link
+https://yearuptemp-my.sharepoint.com/:p:/g/personal/mgriffin_my_yearupunited_org/IQCYhI37ieNPRoU2m-tGhV1nAb-bwgobPQjj8tm8B9eLol8?e=Fm6tmC
+-This link is for my 10-Minute Presentation. On the second slide, the video should be accessible for all to see. Please give me any feedback!
