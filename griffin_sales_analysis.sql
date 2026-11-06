@@ -3,7 +3,7 @@
 -- Capstone 1 Sales Analysis
 
 -- 1st Analysis: Total revenue overall for sales in Connecticut with start and end dates.
-SELECT SUM(Sale_Amount) AS total_rev,
+SELECT SUM(Sale_Amount) AS total_rev, COUNT(Sale_Amount) AS total_transactions,
 MIN(Transaction_Date) AS start_date,
 MAX(Transaction_Date) AS end_date
 FROM store_sales JOIN store_locations
